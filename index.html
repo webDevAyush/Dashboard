@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pesponsive Admin Dashboard</title>
+    <script src="https://kit.fontawesome.com/79f75eee09.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <div class="navigation">
+            <ul>
+                <li>
+                    <a href="#">
+                        <span class="icons"><i class="fab fa-apple"></i></span>
+                        <span class="title">
+                            <h2>Apple</h2>
+                        </span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        <span class="icons"><i class="fas fa-home"></i></span>
+                        <span class="title">Dashboard</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="icons"><i class="fas fa-users"></i></span>
+                        <span class="title">Customers</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="icons"><i class="fas fa-comment"></i></span>
+                        <span class="title">Message</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="icons"><i class="fas fa-question-circle"></i></span>
+                        <span class="title">Help</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="icons"><i class="fas fa-cog"></i></span>
+                        <span class="title">Settings</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="icons"><i class="fas fa-key"></i></span>
+                        <span class="title">Password</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="icons"><i class="fas fa-sign-out-alt"></i></span>
+                        <span class="title">Sign-Out</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="icons"><i class="fas fa-moon"></i></span>
+                        <span class="title">Switch Night Mode</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="main">
+            <div class="topbar">
+                <div class="toggle" onclick="toggleMenu();"> </div>
+                <div class="search">
+                    <label> <input type="text" placeholder="Search Here">
+                        <i class="fas fa-search"></i>
+                    </label>
+                </div>
+                <div class="user">
+                    <a href="https://www.instagram.com/mr.ayushchauhan__/" target="_blank"><img src="./user.jpeg" alt=""></a>
+                </div>
+            </div>
+
+
+            <div class="cardBox">
+                <div class="card">
+                    <div>
+                        <div class="number">1,015</div>
+                        <div class="cardName">Daily Views</div>
+                    </div>
+                    <div class="iconBox">
+                        <i class="fas fa-eye"></i>
+                    </div>
+                </div>
+                <div class="card">
+                    <div>
+                        <div class="number">67</div>
+                        <div class="cardName">Daily Sales</div>
+                    </div>
+                    <div class="iconBox">
+                        <i class="fas fa-shopping-cart"></i>
+                    </div>
+                </div>
+                <div class="card">
+                    <div>
+                        <div class="number">205</div>
+                        <div class="cardName">Comments</div>
+                    </div>
+                    <div class="iconBox">
+                        <i class="fas fa-comment"></i>
+                    </div>
+                </div>
+                <div class="card">
+                    <div>
+                        <div class="number">₹6984</div>
+                        <div class="cardName">Daily Revenue</div>
+                    </div>
+                    <div class="iconBox">
+                        <i class="fas fa-rupee-sign"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="details">
+                <div class="recentOrders">
+                    <div class="cardHeader">
+                        <h2>Recent Orders</h2>
+                        <a href="#" class="btn">View All</a>
+                    </div>
+                    <table>
+                        <thead>
+                            <tr>
+                                <td>Product Name</td>
+                                <td>Price</td>
+                                <td>Payment</td>
+                                <td>Status</td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Apple Watch</td>
+                                <td>₹26999</td>
+                                <td>Paid</td>
+                                <td><span class="status delivered">Delivered</span></td>
+                            </tr>
+                            <tr>
+                                <td>Apple iPhone 11</td>
+                                <td>₹46999</td>
+                                <td>Due</td>
+                                <td><span class="status delivered">Delivered</span></td>
+                            </tr>
+                            <tr>
+                                <td>Apple iPad Air</td>
+                                <td>₹33999</td>
+                                <td>Paid</td>
+                                <td><span class="status pending">Pending</span></td>
+                            </tr>
+                            <tr>
+                                <td>Apple Pencil 2nd Gen</td>
+                                <td>₹12999</td>
+                                <td>Paid</td>
+                                <td><span class="status return">Return</span></td>
+                            </tr>
+                            <tr>
+                                <td>Apple TV</td>
+                                <td>₹68999</td>
+                                <td>Due</td>
+                                <td><span class="status inprocess">In Process</span></td>
+                            </tr>
+                            <tr>
+                                <td>Apple Macbook Pro</td>
+                                <td>₹73999</td>
+                                <td>Paid</td>
+                                <td><span class="status delivered">Delivered</span></td>
+                            </tr>
+                            <tr>
+                                <td>Apple Air Pods</td>
+                                <td>₹27999</td>
+                                <td>Due</td>
+                                <td><span class="status delivered">Delivered</span></td>
+                            </tr>
+                            <tr>
+                                <td>Apple iPhone XR</td>
+                                <td>₹58999</td>
+                                <td>Paid</td>
+                                <td><span class="status pending">Pending</span></td>
+                            </tr>
+                            <tr>
+                                <td>Apple iPod </td>
+                                <td>₹31999</td>
+                                <td>Paid</td>
+                                <td><span class="status return">Return</span></td>
+                            </tr>
+                            <tr>
+                                <td>Apple iMac 27inc </td>
+                                <td>₹193999</td>
+                                <td>Due</td>
+                                <td><span class="status inprocess">In Process</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="recentCustomers">
+                    <div class="cardHeader">
+                        <h2>Recent Customers</h2>
+                    </div>
+                    <table>
+                        <tbody>
+                            <tr>
+                                <td width="60px"><div class="imgbx"><img src="./1.jpg" alt=""></div></td>
+                                <td><h4>Arvind<br><span>Gurgaon, India</span></h4></td>
+                            </tr>
+                            <tr>
+                                <td width="60px"><div class="imgbx"><img src="./2.jpg" alt=""></div></td>
+                                <td><h4>Neha<br><span>Mumbai, India</span></h4></td>
+                            </tr>
+                            <tr>
+                                <td width="60px"><div class="imgbx"><img src="./3.jpeg" alt=""></div></td>
+                                <td><h4>Anjali<br><span>Pune, India</span></h4></td>
+                            </tr>
+                            <tr>
+                                <td width="60px"><div class="imgbx"><img src="./4.jpg" alt=""></div></td>
+                                <td><h4>Shivani<br><span>Kerala, India</span></h4></td>
+                            </tr>
+                            <tr>
+                                <td width="60px"><div class="imgbx"><img src="./5.jpg" alt=""></div></td>
+                                <td><h4>Ramesh<br><span>Kanpur, India</span></h4></td>
+                            </tr>
+                            <tr>
+                                <td width="60px"><div class="imgbx"><img src="./6.jpg" alt=""></div></td>
+                                <td><h4>Shruti<br><span>Banglore, India</span></h4></td>
+                            </tr>
+                            <tr>
+                                <td width="60px"><div class="imgbx"><img src="./7.jpg" alt=""></div></td>
+                                <td><h4>Jack<br><span>Puducherry, India</span></h4></td>
+                            </tr>
+                            <tr>
+                                <td width="60px"><div class="imgbx"><img src="./8.jpg" alt=""></div></td>
+                                <td><h4>Akon<br><span>Goa, India</span></h4></td>
+                            </tr>
+                            <tr>
+                                <td width="60px"><div class="imgbx"><img src="./9.jpg" alt=""></div></td>
+                                <td><h4>Sakshi<br><span>Lucknow, India</span></h4></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="./main.js"></script>
+
+</html>

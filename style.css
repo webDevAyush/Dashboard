@@ -1,0 +1,375 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+body{
+    overflow-x: hidden;
+}
+
+.container{
+    position: relative;
+    width: 100%;
+}
+.navigation{
+    position: fixed;
+    width: 300px;
+    height: 100%;
+    background-color: rgb(12, 16, 31);
+    transition: 0.5s;
+    overflow: hidden;
+}
+.navigation.active{
+    width: 60px;
+}
+.navigation ul{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+.navigation ul li{
+    position: relative;
+    width: 100%;
+    list-style: none;
+}
+.navigation ul li:hover{
+    background: rgb(30, 167, 221);
+}
+.navigation ul li:nth-child(1){
+    margin-bottom: 20px;
+}
+.navigation ul li:nth-child(1):hover{
+    background: transparent;
+}
+.navigation ul li a{
+    position: relative;
+    display: block;
+    width: 100%;
+    display: flex;
+    text-decoration: none;
+    color: #ffffff;
+}
+.navigation ul li a .icons{
+    position: relative;
+    display: block;
+    min-width: 60px;
+    height: 60px;
+    line-height: 60px;
+    text-align: center;
+}
+.navigation ul li a .icons i{
+    color: white;
+    font-size: 22px;
+}
+.navigation ul li a .title{
+    position: relative;
+    display: block;
+    padding: 0 10px;
+    height: 60px;
+    line-height: 60px;
+    white-space: nowrap;
+}
+
+.main{
+    position: absolute;
+    width: calc(100% - 300px);
+    left: 300px;
+    min-height: 100vh;
+    background: white;
+    transition: 0.5s;
+}
+.main.active{
+    width: calc(100% - 60px);
+    left: 60px;
+}
+.main .topbar{
+    width: 100%;
+    background: whitesmoke;
+    height: 60px;
+    padding: 0 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.toggle{
+    position: relative;
+    width: 60px;
+    height: 60px;
+    /* background: red; */
+    cursor: pointer;
+}
+.toggle::before{
+    content: "\f0c9";
+    font-family: fontAwesome;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    line-height: 60px;
+    font-size: 24px;
+    text-align: center;
+    color: #111;
+}
+.search{
+    position: relative;
+    width: 400px;
+    margin: 0 10px;
+}
+.search label{
+    position: relative;
+    width: 100%;
+}
+.search label input{
+    width: 100%;
+    height: 40px;
+    border-radius: 40px;
+    outline: none;
+    padding: 5px 20px;
+    border: 1px solid red;
+    padding-left: 35px;
+}
+.search label i{
+    position: absolute;
+    left: 15px;
+    top: 4px;
+}
+.user{
+    position: relative;
+    min-width: 50px;
+    height: 50px;
+    width: 50x;
+    border-radius: 50%;
+    overflow: hidden;
+    cursor: pointer;
+}
+.user img{
+    position: absolute;
+    top: 0 ;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.cardBox{
+    position: relative;
+    width: 100%;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-gap: 20px;
+}
+.cardBox .card{
+    position: relative;
+    background: #f5f2ef;
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+    padding: 20px;
+}
+.cardBox .card .number{
+    position: relative;
+    font-size: 2em;
+    font-family: 500;
+}
+.cardBox .card .cardName{
+    color: #999;
+}
+.cardBox .card .iconBox{
+    font-size: 2.2em;
+    color: rgb(30, 167, 221);
+}
+
+.details{
+    position: relative;
+    width: 100%;
+    padding-top: 0;
+    padding: 20px;
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: 2fr 1fr;
+}
+.recentOrders{
+    position: relative;
+    min-height: 530px;
+    background: #f5f2ef;
+    padding: 20px;
+}
+.cardHeader{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+.cardHeader h2{
+    font-family: 600;
+}
+.btn{
+    position: relative;
+    padding: 5px 10px;
+    background: rgb(30, 167, 221);
+    text-decoration: none;
+    color: white;
+    border-radius: 12px;
+}
+.details table{
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+.details table thead td{
+    font-weight: 600;
+}
+.details .recentOrders table tr{
+    border-bottom: 1px solid rgb(163, 162, 162);
+}
+.details .recentOrders table tbody tr:last-child{
+    border-bottom: none;
+}
+
+.details .recentOrders table tbody tr:hover{
+    background: rgb(30, 167, 221);
+    color: white;
+}
+.details .recentOrders table tr td{
+    padding: 9px 5px ;
+}
+.details .recentOrders table thead tr td:last-child,
+.details .recentOrders table tbody tr td:last-child{
+    text-align: right;
+}
+.details .recentOrders table thead tr td:nth-child(2),
+.details .recentOrders table tbody tr td:nth-child(2){
+    text-align: center;
+    padding-right: 20px;
+}
+.details .recentOrders table thead tr td:nth-child(3),
+.details .recentOrders table tbody tr td:nth-child(3){
+    text-align: center;
+}
+.status{
+    position: relative;
+    padding: 2px 4px;
+    /* background: red; */
+    color: white;
+    border: 4px;
+    font-size: 14px;
+    letter-spacing: 1px;
+    font-weight: 300;
+}
+.delivered{
+    background: rgb(30, 221, 71);
+}
+.inprocess{
+    background: rgb(14, 190, 190);
+}
+.pending{
+    background: #f9ca3f;
+}
+.return{
+    background: red;
+}
+.details .recentCustomers{
+    position: relative;
+    min-height: 530px;
+    background: #f5f2ef;
+    padding: 20px;
+}
+.details .recentCustomers .imgbx{
+    position: relative;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+.details .recentCustomers .imgbx img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.details .recentCustomers table tr:hover,
+.details .recentCustomers table tr:hover td h4 span{
+    background: rgb(30, 167, 221);
+    color: white;
+}
+.details .recentCustomers table tr td{
+    padding: 7px 10px;
+}
+.details .recentCustomers table tr td h4{
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.2em;
+}
+.details .recentCustomers table tr td h4 span{
+    font: 14px;
+    color: rgb(134, 132, 132);
+}
+
+
+/* Responsive  */
+@media (max-width: 992px){
+    .navigation{
+        left: -300px;
+    }
+    .navigation.active{
+        left: 0;
+        width: 300px
+    }
+    .main{
+        width: 100%;
+        left: 0;
+    }
+    .main.active{
+        width: calc(100% - 300px);
+        left: 300px;
+    }
+    .cardBox{
+        grid-template-columns: repeat(2,1fr);
+    }
+}
+
+@media (max-width: 768px){
+    .details{
+        grid-template-columns: repeat(1,1fr);
+    }
+    .cardHeader h2{
+        font-weight: 600;
+        font-size: 18px;
+    }
+}
+@media (max-width: 480px){
+    .cardBox{
+        grid-template-columns: repeat(1,1fr);
+    }
+    .details .recentOrders{
+        overflow-x: auto;
+    }
+    .details .recentOrders table{
+        width: 600px;
+    }
+    .navigation{
+        width: 100%;
+        left: -100%;
+        z-index: 1000;
+    }
+    .navigation.active{
+        width: 100%;
+        left: 0;
+    }
+    .toggle.active{
+        position: fixed;
+        z-index: 10000;
+        right: 0;
+        left: inherit;
+    }
+    .toggle.active::before{
+        color: white;
+    }
+    .main, .main.active{
+        width: 100%;
+        left: 0;
+    }
+}
